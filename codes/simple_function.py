@@ -28,11 +28,11 @@ def two_plus_numbers() -> int:
             raise Exception(
                 f"You total is {sum_numbers}, which is not a positive number. Please try again.")
 
-        return sum_numbers
-
-    except ValueError as e:
-        print("Remember, you are supposed to enter a positive number! Error: ", e)
+    except ValueError as ex:
+        print("Remember, you are supposed to enter a positive number! Error: ", ex)
         raise
+
+    return sum_numbers
 
 
 # ============================================================================ #
@@ -43,7 +43,6 @@ print("*" * 30)
 print(two_plus_numbers())
 print("*" * 30)
 print("\n")
-
 
 # ============================================================================ #
 # END
