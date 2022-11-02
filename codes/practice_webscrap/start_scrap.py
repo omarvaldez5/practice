@@ -74,7 +74,24 @@ find_subtitle()
 
 soup_with_xpath = BeautifulSoup(SIMPLE_HTML, "lxml")
 def find_xpath_title():
-     h1_tag = simple_soup.find("h1")
+     h1_tag = soup_with_xpath.find("h1").string
+     print(h1_tag)
+
+print("*" * 30)
+print("With xpath")
+find_xpath_title()
+
+def find_xpath_subtitle():
+    paragraph = soup_with_xpath.find("//p[@class='subtitle']")
+    print(paragraph)
+
+print("*" * 30)
+print("With xpath")
+find_xpath_subtitle()
+
+
+
+
 
 
 # ============================================================================ #
